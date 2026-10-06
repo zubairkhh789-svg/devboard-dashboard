@@ -1,0 +1,844 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>DevBoard - Developer Dashboard</title>
+
+    <link
+        rel="stylesheet"
+        href="style.css"
+    >
+
+</head>
+
+
+<body>
+
+    <!-- =========================================
+         SIDEBAR
+    ========================================== -->
+
+    <aside class="sidebar" id="sidebar">
+
+        <div class="brand">
+
+            <div class="brand-icon">
+                D
+            </div>
+
+            <div>
+                <h2>DevBoard</h2>
+                <span>Developer Workspace</span>
+            </div>
+
+        </div>
+
+
+        <nav class="sidebar-nav">
+
+            <a href="#dashboard" class="nav-link active">
+
+                <span>⌂</span>
+
+                Dashboard
+
+            </a>
+
+
+            <a href="#projects" class="nav-link">
+
+                <span>▣</span>
+
+                Projects
+
+            </a>
+
+
+            <a href="#activity" class="nav-link">
+
+                <span>◷</span>
+
+                Activity
+
+            </a>
+
+
+            <a href="#settings" class="nav-link">
+
+                <span>⚙</span>
+
+                Settings
+
+            </a>
+
+        </nav>
+
+
+        <div class="sidebar-bottom">
+
+            <div class="developer-card">
+
+                <div class="avatar">
+                    Z
+                </div>
+
+                <div>
+
+                    <strong>Zubair</strong>
+
+                    <small>Web Developer</small>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </aside>
+
+
+    <!-- =========================================
+         MAIN AREA
+    ========================================== -->
+
+    <div class="main-wrapper">
+
+
+        <!-- TOPBAR -->
+
+        <header class="topbar">
+
+            <button
+                class="mobile-menu-btn"
+                id="mobileMenuBtn"
+            >
+                ☰
+            </button>
+
+
+            <div class="topbar-title">
+
+                <span>Workspace</span>
+
+                <h1 id="pageTitle">
+                    Dashboard
+                </h1>
+
+            </div>
+
+
+            <div class="topbar-actions">
+
+                <button
+                    class="icon-btn"
+                    id="notificationBtn"
+                    title="Notifications"
+                >
+                    🔔
+                </button>
+
+
+                <button
+                    class="theme-btn"
+                    id="themeBtn"
+                >
+                    ☾
+                </button>
+
+            </div>
+
+        </header>
+
+
+        <!-- =====================================
+             CONTENT
+        ====================================== -->
+
+        <main class="content">
+
+
+            <!-- DASHBOARD -->
+
+            <section
+                class="page-section"
+                id="dashboard"
+            >
+
+                <div class="welcome-section">
+
+                    <div>
+
+                        <span class="eyebrow">
+                            Developer Workspace
+                        </span>
+
+                        <h2>
+                            Welcome back, Zubair 👋
+                        </h2>
+
+                        <p>
+                            Manage your projects and track your development progress.
+                        </p>
+
+                    </div>
+
+
+                    <button
+                        class="primary-btn"
+                        id="openProjectBtn"
+                    >
+
+                        + New Project
+
+                    </button>
+
+                </div>
+
+
+                <!-- STATISTICS -->
+
+                <div class="stats-grid">
+
+
+                    <div class="stat-card">
+
+                        <div class="stat-icon blue">
+                            ▣
+                        </div>
+
+                        <div>
+
+                            <span>Total Projects</span>
+
+                            <strong id="totalProjects">
+                                0
+                            </strong>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="stat-card">
+
+                        <div class="stat-icon green">
+                            ✓
+                        </div>
+
+                        <div>
+
+                            <span>Completed</span>
+
+                            <strong id="completedProjects">
+                                0
+                            </strong>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="stat-card">
+
+                        <div class="stat-icon orange">
+                            ◷
+                        </div>
+
+                        <div>
+
+                            <span>In Progress</span>
+
+                            <strong id="progressProjects">
+                                0
+                            </strong>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="stat-card">
+
+                        <div class="stat-icon purple">
+                            %
+                        </div>
+
+                        <div>
+
+                            <span>Completion Rate</span>
+
+                            <strong id="completionRate">
+                                0%
+                            </strong>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <!-- QUICK OVERVIEW -->
+
+                <div class="dashboard-grid">
+
+
+                    <div class="panel">
+
+                        <div class="panel-header">
+
+                            <div>
+
+                                <span class="eyebrow">
+                                    Overview
+                                </span>
+
+                                <h3>
+                                    Project Progress
+                                </h3>
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="progress-overview">
+
+                            <div class="progress-circle">
+
+                                <span id="progressPercentage">
+                                    0%
+                                </span>
+
+                            </div>
+
+
+                            <div>
+
+                                <h4>
+                                    Keep building 🚀
+                                </h4>
+
+                                <p>
+                                    Complete projects to improve your progress score.
+                                </p>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="panel">
+
+                        <div class="panel-header">
+
+                            <div>
+
+                                <span class="eyebrow">
+                                    Latest
+                                </span>
+
+                                <h3>
+                                    Recent Activity
+                                </h3>
+
+                            </div>
+
+                        </div>
+
+
+                        <div
+                            class="activity-list"
+                            id="dashboardActivity"
+                        >
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+
+            <!-- =====================================
+                 PROJECTS
+            ====================================== -->
+
+            <section
+                class="page-section"
+                id="projects"
+            >
+
+                <div class="section-heading">
+
+                    <div>
+
+                        <span class="eyebrow">
+                            Workspace
+                        </span>
+
+                        <h2>
+                            My Projects
+                        </h2>
+
+                    </div>
+
+
+                    <button
+                        class="primary-btn"
+                        id="openProjectBtn2"
+                    >
+                        + Add Project
+                    </button>
+
+                </div>
+
+
+                <!-- PROJECT CONTROLS -->
+
+                <div class="project-controls">
+
+                    <div class="search-box">
+
+                        <span>
+                            🔍
+                        </span>
+
+                        <input
+                            type="text"
+                            id="searchInput"
+                            placeholder="Search projects..."
+                        >
+
+                    </div>
+
+
+                    <select id="statusFilter">
+
+                        <option value="all">
+                            All Projects
+                        </option>
+
+                        <option value="progress">
+                            In Progress
+                        </option>
+
+                        <option value="completed">
+                            Completed
+                        </option>
+
+                    </select>
+
+                </div>
+
+
+                <!-- PROJECT GRID -->
+
+                <div
+                    class="project-grid"
+                    id="projectGrid"
+                >
+
+                </div>
+
+
+                <div
+                    class="empty-state"
+                    id="emptyState"
+                >
+
+                    <div>
+                        📁
+                    </div>
+
+                    <h3>
+                        No projects found
+                    </h3>
+
+                    <p>
+                        Create your first project to get started.
+                    </p>
+
+                </div>
+
+            </section>
+
+
+            <!-- =====================================
+                 ACTIVITY
+            ====================================== -->
+
+            <section
+                class="page-section"
+                id="activity"
+            >
+
+                <div class="section-heading">
+
+                    <div>
+
+                        <span class="eyebrow">
+                            Timeline
+                        </span>
+
+                        <h2>
+                            Activity
+                        </h2>
+
+                    </div>
+
+                </div>
+
+
+                <div class="panel">
+
+                    <div
+                        class="activity-list large"
+                        id="activityList"
+                    >
+
+                    </div>
+
+                </div>
+
+            </section>
+
+
+            <!-- =====================================
+                 SETTINGS
+            ====================================== -->
+
+            <section
+                class="page-section"
+                id="settings"
+            >
+
+                <div class="section-heading">
+
+                    <div>
+
+                        <span class="eyebrow">
+                            Preferences
+                        </span>
+
+                        <h2>
+                            Settings
+                        </h2>
+
+                    </div>
+
+                </div>
+
+
+                <div class="settings-grid">
+
+
+                    <div class="setting-card">
+
+                        <div>
+
+                            <h3>
+                                Appearance
+                            </h3>
+
+                            <p>
+                                Switch between dark and light themes.
+                            </p>
+
+                        </div>
+
+                        <button
+                            class="secondary-btn"
+                            id="settingsThemeBtn"
+                        >
+                            Toggle Theme
+                        </button>
+
+                    </div>
+
+
+                    <div class="setting-card">
+
+                        <div>
+
+                            <h3>
+                                Clear Projects
+                            </h3>
+
+                            <p>
+                                Delete all projects stored in this browser.
+                            </p>
+
+                        </div>
+
+                        <button
+                            class="danger-btn"
+                            id="clearProjectsBtn"
+                        >
+                            Clear All
+                        </button>
+
+                    </div>
+
+
+                    <div class="setting-card">
+
+                        <div>
+
+                            <h3>
+                                Storage
+                            </h3>
+
+                            <p>
+                                Your projects are stored locally in your browser.
+                            </p>
+
+                        </div>
+
+                        <span class="storage-status">
+                            ● Local
+                        </span>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+        </main>
+
+    </div>
+
+
+    <!-- =========================================
+         PROJECT MODAL
+    ========================================== -->
+
+    <div
+        class="modal-overlay"
+        id="projectModal"
+    >
+
+        <div class="modal">
+
+            <div class="modal-header">
+
+                <div>
+
+                    <span class="eyebrow">
+                        Project
+                    </span>
+
+                    <h2 id="modalTitle">
+                        Create Project
+                    </h2>
+
+                </div>
+
+
+                <button
+                    class="close-btn"
+                    id="closeModalBtn"
+                >
+                    ×
+                </button>
+
+            </div>
+
+
+            <form id="projectForm">
+
+                <input
+                    type="hidden"
+                    id="editProjectId"
+                >
+
+
+                <label>
+                    Project Name
+                </label>
+
+                <input
+                    type="text"
+                    id="projectName"
+                    placeholder="e.g. Portfolio Website"
+                    required
+                >
+
+
+                <label>
+                    Technologies
+                </label>
+
+                <input
+                    type="text"
+                    id="projectTech"
+                    placeholder="e.g. HTML, CSS, JavaScript"
+                    required
+                >
+
+
+                <label>
+                    Description
+                </label>
+
+                <textarea
+                    id="projectDescription"
+                    placeholder="Describe your project..."
+                    rows="4"
+                ></textarea>
+
+
+                <label>
+                    Project Link
+                </label>
+
+                <input
+                    type="url"
+                    id="projectLink"
+                    placeholder="https://example.com"
+                >
+
+
+                <div class="modal-actions">
+
+                    <button
+                        type="button"
+                        class="secondary-btn"
+                        id="cancelModalBtn"
+                    >
+                        Cancel
+                    </button>
+
+                    <button
+                        type="submit"
+                        class="primary-btn"
+                    >
+                        Save Project
+                    </button>
+
+                </div>
+
+            </form>
+
+        </div>
+
+    </div>
+
+
+    <!-- =========================================
+         PROJECT DETAILS MODAL
+    ========================================== -->
+
+    <div
+        class="modal-overlay"
+        id="detailsModal"
+    >
+
+        <div class="modal details-modal">
+
+            <button
+                class="close-btn"
+                id="closeDetailsBtn"
+            >
+                ×
+            </button>
+
+
+            <span class="eyebrow">
+                Project Details
+            </span>
+
+
+            <h2 id="detailsName">
+                Project
+            </h2>
+
+
+            <span
+                class="status-badge"
+                id="detailsStatus"
+            >
+                In Progress
+            </span>
+
+
+            <p id="detailsDescription">
+            </p>
+
+
+            <div class="details-tech">
+
+                <strong>
+                    Technologies
+                </strong>
+
+                <p id="detailsTech">
+                </p>
+
+            </div>
+
+
+            <a
+                href="#"
+                target="_blank"
+                id="detailsLink"
+                class="primary-btn"
+            >
+                Open Project
+            </a>
+
+        </div>
+
+    </div>
+
+
+    <!-- =========================================
+         NOTIFICATION
+    ========================================== -->
+
+    <div
+        class="notification-panel"
+        id="notificationPanel"
+    >
+
+        <div class="notification-header">
+
+            <strong>
+                Notifications
+            </strong>
+
+            <button id="closeNotification">
+                ×
+            </button>
+
+        </div>
+
+
+        <div id="notificationContent">
+
+            <p>
+                You're all caught up.
+            </p>
+
+        </div>
+
+    </div>
+
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
